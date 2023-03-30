@@ -11,11 +11,11 @@ void setPosition(kondo_servo_t* const this, uint16_t target_position){
 	tx_buff[2] = (uint8_t)(target_position&0x007f);
 
 	HAL_HalfDuplex_EnableTransmitter(&this->port_);
-	ret = HAL_UART_Transmit(&this->port_, tx_buff, tx_size, 10);
+	ret = HAL_UART_Transmit(&this->port_, tx_buff, tx_size, 1);
 	if(ret == HAL_OK){
 		HAL_HalfDuplex_EnableReceiver(&this->port_);
 	}
-	ret = HAL_UART_Receive(&this->port_, rx_buff, rx_size, 10);
+	ret = HAL_UART_Receive(&this->port_, rx_buff, rx_size, 1);
 
 	this->target_position_ = target_position;
 	id = rx_buff[0] & 0x1f;
@@ -33,11 +33,11 @@ uint16_t readPosition(kondo_servo_t* const this){
 	tx_buff[1] = 0x05;
 
 	HAL_HalfDuplex_EnableTransmitter(&this->port_);
-	ret = HAL_UART_Transmit(&this->port_, tx_buff, tx_size, 10);
+	ret = HAL_UART_Transmit(&this->port_, tx_buff, tx_size, 1);
 	if(ret == HAL_OK){
 		HAL_HalfDuplex_EnableReceiver(&this->port_);
 	}
-	ret = HAL_UART_Receive(&this->port_, rx_buff, rx_size, 10);
+	ret = HAL_UART_Receive(&this->port_, rx_buff, rx_size, 1);
 
 	id = rx_buff[0] & 0x1f;
 	if(id == this->id_){
