@@ -103,33 +103,53 @@ int main(void)
   while (1)
   {
 
-	  HAL_Delay(500);
+	  HAL_Delay(200);
 	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  setPosition(&kondo_servo1, 7500);
 	  HAL_Delay(10);
-	  setPosition(&kondo_servo2, 7500);
 
-	  HAL_Delay(500);
+	  HAL_Delay(200);
+	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+	  setPosition(&kondo_servo2, 7500);
+	  HAL_Delay(10);
+
+	  HAL_Delay(200);
 	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  setPosition(&kondo_servo1, 9000);
 	  HAL_Delay(10);
-	  setPosition(&kondo_servo2, 9000);
 
-	  HAL_Delay(500);
+	  HAL_Delay(200);
+	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+	  setPosition(&kondo_servo2, 9000);
+	  HAL_Delay(10);
+
+	  HAL_Delay(200);
 	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  setPosition(&kondo_servo1, 7500);
 	  HAL_Delay(10);
-	  setPosition(&kondo_servo2, 7500);
 
-	  HAL_Delay(500);
+	  HAL_Delay(200);
+	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+	  setPosition(&kondo_servo2, 7500);
+	  HAL_Delay(10);
+
+	  HAL_Delay(200);
 	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  setPosition(&kondo_servo1, 6000);
 	  HAL_Delay(10);
+
+	  HAL_Delay(200);
+	  HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+	  HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 	  setPosition(&kondo_servo2, 6000);
+	  HAL_Delay(10);
 
 
     /* USER CODE END WHILE */
